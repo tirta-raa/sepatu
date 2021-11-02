@@ -14,3 +14,4 @@ part 'splash_screen_page.dart.dart';
 part 'sign_pages/sign_in_page.dart';
 part 'sign_pages/sign_page.dart';
 part 'sign_pages/sign_up_page.dart';
+part 'home_page.dart';
