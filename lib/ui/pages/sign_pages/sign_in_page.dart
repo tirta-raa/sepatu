@@ -14,6 +14,43 @@ class _SignInPageState extends State<SignInPage> {
 
   @override
   Widget build(BuildContext context) {
+    //
+    Widget emailField() {
+      return CusttomTextField(
+        title: 'Email Address',
+        imageAsset: 'assets/ic_email.png',
+        hintText: 'Your email Address',
+        controller: emailController,
+      );
+    }
+
+    Widget passwordField() {
+      return CusttomTextField(
+        margin: const EdgeInsets.only(bottom: 30),
+        obscureText: true,
+        title: 'Password',
+        imageAsset: 'assets/ic_lock.png',
+        hintText: 'Your Password',
+        controller: passwordController,
+      );
+    }
+
+    Widget signInButton() {
+      return CusttomButton(
+        onPressed: () {},
+        text: 'Sign In',
+        textStyle: whiteTextStyle2,
+      );
+    }
+
+    Widget signUpButton() {
+      return CusttomTextButton(
+        textLeft: "Don't have an account?  ",
+        textRight: 'Sign Up',
+        textButtonOnTap: () {},
+      );
+    }
+
     return Stack(
       children: [
         SignPage(
@@ -21,33 +58,13 @@ class _SignInPageState extends State<SignInPage> {
           description: 'Sign In to Continue',
           body: Column(
             children: [
-              CusttomTextField(
-                title: 'Email Address',
-                imageAsset: 'assets/ic_email.png',
-                hintText: 'Your email Address',
-                controller: emailController,
-              ),
-              CusttomTextField(
-                margin: const EdgeInsets.only(bottom: 30),
-                obscureText: true,
-                title: 'Password',
-                imageAsset: 'assets/ic_lock.png',
-                hintText: 'Your Password',
-                controller: passwordController,
-              ),
-              CusttomButton(
-                onPressed: () {},
-                text: 'Sign In',
-                textStyle: whiteTextStyle2,
-              ),
+              emailField(),
+              passwordField(),
+              signInButton(),
             ],
           ),
         ),
-        CusttomTextButton(
-          textLeft: "Don't have an account?  ",
-          textRight: 'Sign Up',
-          textButtonOnTap: () {},
-        ),
+        signUpButton()
       ],
     );
   }
