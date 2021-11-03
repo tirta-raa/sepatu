@@ -67,6 +67,75 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(
+                defaultMargin,
+                defaultMargin,
+                0,
+                14,
+              ),
+              child: Text(
+                'Popular Products',
+                style: whiteTextStyle1.copyWith(fontSize: 22),
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  ShoesCard(),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  ShoesCard(),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  ShoesCard(),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: defaultMargin, left: defaultMargin),
+              child: Text(
+                'New Arrivals',
+                style: whiteTextStyle1.copyWith(fontSize: 22),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(
+                top: 14,
+                left: defaultMargin,
+                right: defaultMargin,
+              ),
+              child: Column(
+                children: [
+                  ShoeListCard(),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  ShoeListCard(),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  ShoeListCard(),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  ShoeListCard(),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

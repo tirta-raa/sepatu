@@ -25,7 +25,7 @@ class CusttomTabbar extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.only(
                     right: 16,
-                    left: titles.indexOf(e) != 0 ? 0 : 16,
+                    left: titles.indexOf(e) != 0 ? 0 : 30,
                   ),
                   width: 83,
                   height: 40,
